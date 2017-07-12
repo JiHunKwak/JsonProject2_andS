@@ -22,7 +22,7 @@ public class Acc_BaseActivity extends AppCompatActivity {
 
         dbM = new Acc_DBManager(getApplicationContext(), "Account.db", null, 1);
 //        dbM.delete("DELETE FROM Account");
-//        dbM.loadData();
+//        dbM.loadData();곽지
 
 //        accArray = new ArrayList<>();
 

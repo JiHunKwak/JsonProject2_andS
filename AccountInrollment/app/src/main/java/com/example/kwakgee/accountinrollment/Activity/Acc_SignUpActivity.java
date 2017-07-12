@@ -118,7 +118,7 @@ public class Acc_SignUpActivity extends AppCompatActivity {
         }else{
             if (exc.isMatchID(id)){
                 step1.setVisibility(View.INVISIBLE);
-                step1.startAnimation(anim);
+                step2.startAnimation(anim);
             } else {
                 Toast.makeText(getApplicationContext(), "ID 형식을 확인하세요.", Toast.LENGTH_SHORT).show();
             }
@@ -133,7 +133,7 @@ public class Acc_SignUpActivity extends AppCompatActivity {
         if(exc.isMatchPW(password)){
             if(password.equals(passwordChecker)){
                 step2.setVisibility(View.INVISIBLE);
-                step2.startAnimation(anim);
+                step3.startAnimation(anim);
             } else {
                 Toast.makeText(getApplicationContext(), "비밀번호가 서로 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
             }
@@ -150,7 +150,7 @@ public class Acc_SignUpActivity extends AppCompatActivity {
 
         if(exc.isMatchOther(name, phone, email)){
             step3.setVisibility(View.INVISIBLE);
-            step3.startAnimation(anim);
+            step4.startAnimation(anim);
             Toast.makeText(getApplicationContext(), "프로필 이미지 변경을 하지 않아도 다음에 수정 할 수 있습니다.", Toast.LENGTH_LONG).show();
         }else{
             Toast.makeText(getApplicationContext(), "이름 또는 휴대폰번호, 이메일 형식을 확인하세요.", Toast.LENGTH_SHORT).show();
@@ -172,7 +172,7 @@ public class Acc_SignUpActivity extends AppCompatActivity {
         tv_EM.setText("E-mail: " + email);
 
         step4.setVisibility(View.INVISIBLE);
-        step4.startAnimation(anim);
+        step5.startAnimation(anim);
     }
 
     String mCurrentPhotoPath;
