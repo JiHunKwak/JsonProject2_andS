@@ -11,7 +11,8 @@ import java.net.URL;
  * Created by kwakgee on 2017. 7. 15..
  */
 
-public class HttpConnecter extends Thread{
+public class HttpConnecter extends Thread{  // 안드로이드 스튜디오에서 여러 이유 때문에
+                                            // 메인쓰레드에서의 http통신을 막아놓아, 임의의 쓰레드 사용
 
     private static HttpConnecter daM = new HttpConnecter();
     private HttpConnecter(){

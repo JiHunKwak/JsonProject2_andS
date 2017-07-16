@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
         HttpConnecter htC = HttpConnecter.getInstance();
         htC.start();
-        try{ htC.join(); }catch (Exception e){}
+        try{ htC.join(); }catch (Exception e){} // 스레드 상태 제어.
 
         jsonM.jsonReader();
 
         imgM = ImageManager.getInstance();
         imgM.start();
-        try{ imgM.join(); }catch (Exception e){}
+        try{ imgM.join(); }catch (Exception e){} // 스레드 상태 제어.
 
         listView = (ListView) findViewById(R.id.listView);
 
@@ -70,6 +70,6 @@ public class MainActivity extends AppCompatActivity {
             return jsonItemView;
 
         }
-    }
+    } // ListView에 데이터를 담기위한 내부 클래스. (Adapter 공부하기)
 
 }

@@ -11,7 +11,7 @@ import java.util.List;
  * Created by kwakgee on 2017. 7. 16..
  */
 
-public class ImageManager extends Thread {
+public class ImageManager extends Thread {  // 이미지 관련 http통신을 위한 또다른 쓰레드
 
     private static ImageManager imgM = new ImageManager();
     private ImageManager(){}
@@ -19,7 +19,7 @@ public class ImageManager extends Thread {
         return imgM;
     }
 
-    public List<Bitmap> bmpArr;
+    public List<Bitmap> bmpArr; // 각 url로부터 http통신을 통해 불러온 이미지를 담는 리스트
 
     @Override
     public void run() {

@@ -16,6 +16,8 @@ import com.example.kwakgee.jsonproject2.R;
  */
 
 public class JsonItemView extends LinearLayout {
+    // 리니어 레이아웃을 상속받는 클래스. ListView를 사용하기위해 만든 자바 클래스이다.
+    // 일단 부분적으로 강의를 본 상태라 앞뒤 내용이 이어지지 않아 정확히 이해는 하지 못하였다.
 
     ImageView iv_image;
     TextView tv_rank;
@@ -36,7 +38,7 @@ public class JsonItemView extends LinearLayout {
     private void init(Context context) {
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.json_item, this, true);
+        inflater.inflate(R.layout.json_item, this, true); // Inflater 공부하기
 
         iv_image = (ImageView) findViewById(R.id.iv_image);
         tv_rank = (TextView) findViewById(R.id.tv_rank);
@@ -52,6 +54,7 @@ public class JsonItemView extends LinearLayout {
     public void setSequence(String sequence){
         tv_sequence.setText(sequence);
     }
+
     public void setImage(Bitmap image){
         iv_image.setImageBitmap(image);
     }

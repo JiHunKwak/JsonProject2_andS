@@ -21,7 +21,7 @@ public class JSONManager {
     }
 
 
-    public List<ListObject> objArr;
+    public List<ListObject> objArr; // 요청 url 페이지의 각 JSON 키워드로부터 가져온 값들을 저장하기 위한 리스트
 
     public void jsonReader(){
         HttpConnecter htC = HttpConnecter.getInstance();
