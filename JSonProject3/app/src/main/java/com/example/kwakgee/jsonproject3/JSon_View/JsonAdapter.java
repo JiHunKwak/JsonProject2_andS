@@ -63,6 +63,8 @@ public class JsonAdapter extends RecyclerView.Adapter<JsonAdapter.ViewHolder>{
             edt_Sequence = (TextView) itemView.findViewById(R.id.card_sequence_TextView);
         }
 
+        
 
     }
+
 }
